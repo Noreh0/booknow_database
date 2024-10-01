@@ -31,9 +31,6 @@ CREATE TABLE `pontos` (
   `tipo` enum('GANHO','GASTO') NOT NULL,
   PRIMARY KEY (`idPontos`),
   UNIQUE KEY `idPontos_UNIQUE` (`idPontos`),
-  UNIQUE KEY `data_transacao_UNIQUE` (`data_transacao`),
-  UNIQUE KEY `idLivro_UNIQUE` (`idLivro`),
-  UNIQUE KEY `idUser_UNIQUE` (`idUser`),
   CONSTRAINT `idLivro` FOREIGN KEY (`idLivro`) REFERENCES `livros` (`idLivros`),
   CONSTRAINT `idUser` FOREIGN KEY (`idUser`) REFERENCES `usuario` (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
